@@ -1,0 +1,15 @@
+# Auto-generated requirements for converted code
+# Review and pin versions as appropriate before deploying
+
+config
+data
+evaluation
+generate_data
+logger
+matplotlib
+models
+numpy
+pandas
+preprocessing
+statsmodels
+utils
