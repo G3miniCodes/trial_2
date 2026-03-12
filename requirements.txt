@@ -1,0 +1,12 @@
+# Auto-generated requirements for converted code
+# Review and pin versions as appropriate before deploying
+# Python >= 3.12  (generated on 3.12.10)
+
+config
+generate_data
+logger
+matplotlib
+numpy
+pandas
+statsmodels
+utils
