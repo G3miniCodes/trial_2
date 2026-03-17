@@ -14,18 +14,15 @@ from utils.logger import log_message
 
 log_message("Starting ML Pipeline")
 
-data = load_dataset()
+def main():
+    data = load_dataset()
+    clean = clean_data(data)
+    features = create_features(clean)
+    model = train_model(features)
+    pred = make_predictions(model, features)
+    score = calculate_mse(pred, features.y)
+    plot_results(features.y, pred)
+    log_message(f"Final MSE: {score}")
 
-clean = clean_data(data)
-
-features = create_features(clean)
-
-model = train_model(features)
-
-pred = make_predictions(model, features)
-
-score = calculate_mse(pred, features.y)
-
-plot_results(features.y, pred)
-
-log_message(f"Final MSE: {score}")
+if __name__ == "__main__":
+    main()
